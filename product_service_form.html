@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Automobile POS System</title>
+    <!-- Quicksand -->
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,700" rel="stylesheet">
+    <!-- Bootstrap CDN -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Air Datepicker CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/css/datepicker.min.css" rel="stylesheet">
+    <!-- Ionicons -->
+    <link href="https://unpkg.com/ionicons@4.2.2/dist/css/ionicons.min.css" rel="stylesheet">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="box_layout">
+        <header class="site_header">
+            <div class="container-fluid">
+                <div class="row align-items-center justify-content-between">
+                    <div class="col-auto">
+                        <a href="index.html" class="site_logo text-uppercase">Automobile POS System</a>
+                        <ul class="nav c_breadcrumb">
+                            <li><a href="index.html">Home</a></li>
+                            <li class="arrow"><i class="ion ion-ios-arrow-forward"></i></li>
+                            <li>Add Product / Service</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-auto d-flex justify-content-between">
+                            <a href="invoice.html" class="btn btn-link btn_icon md"><i
+                                    class="ion ion-md-add-circle mr-2"></i><span>Create Invoice</span></a>
+                        </div>
+                </div>
+            </div>
+        </header>
+        <div class="site_content">
+            <div class="product_service_form_wrapper">
+                <form class="site_block">
+                    <div class="site_block_body row">
+                        <div class="col">
+                            <fieldset class="form-group mb-5">
+                                <div class="row flex-column">
+                                    <legend class="col-form-label c_form_label_lg col-12 pt-0">What do you want to add?
+                                    </legend>
+                                    <div class="col-12">
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" id="customRadioInline1" name="customRadioInline1"
+                                                class="custom-control-input">
+                                            <label class="custom-control-label c_control_label"
+                                                for="customRadioInline1">I want to add Product</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" id="customRadioInline2" name="customRadioInline1"
+                                                class="custom-control-input">
+                                            <label class="custom-control-label c_control_label"
+                                                for="customRadioInline2">I want to add Service</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <div class="row">
+                                <div class="col-3">
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Product Name</label>
+                                        <input type="text" class="form-control" id="" name="" aria-describedby="">
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Brand Name</label>
+                                        <input type="text" class="form-control" id="" name="" aria-describedby="">
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Part No.</label>
+                                        <input type="text" class="form-control" id="" name="" aria-describedby="">
+                                    </div>
+                                </div>
+                                <div class="col-1">
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Quantity</label>
+                                        <input type="number" class="form-control" id="" name="" aria-describedby="">
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Rack No.</label>
+                                        <input type="text" class="form-control" id="" name="" aria-describedby="">
+                                    </div>
+                                </div>
+                                <div class="col-1 align-self-center">
+                                    <div class="form-action-group d-flex align-items-center justify-content-between">
+                                        <button type="button" class="btn btn-light mr-2"><i
+                                                class="ion ion-md-add text-primary"></i></button>
+                                        <button type="button" class="btn btn-light"><i
+                                                class="ion ion-ios-trash text-danger"></i></button>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Description</label>
+                                        <input type="text" class="form-control" id="" name="" aria-describedby="">
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class="row">
+                                <div class="col-2">
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Service Type</label>
+                                        <input type="text" class="form-control" id="" name="" aria-describedby="">
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Product Name</label>
+                                        <input type="text" class="form-control" id="" name="" aria-describedby="">
+                                    </div>
+                                </div>
+                                <div class="col-5">
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Description</label>
+                                        <input type="text" class="form-control" id="" name="" aria-describedby="">
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Cost</label>
+                                        <input type="text" class="form-control" id="" name="" aria-describedby="">
+                                    </div>
+                                </div>
+                                <div class="col-1 align-self-center">
+                                    <div class="form-action-group d-flex align-items-center justify-content-between">
+                                        <button type="button" class="btn btn-light mr-2"><i
+                                                class="ion ion-md-add text-primary"></i></button>
+                                        <button type="button" class="btn btn-light"><i
+                                                class="ion ion-ios-trash text-danger"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="site_block_footer">
+                        <div class="row align-items-center justify-content-between">
+                            <div class="col-auto">
+                                <!-- text-success -->
+                                <p class="c_alert text-danger">Alert message will show here.</p>
+                            </div>
+                            <div class="col-auto text-right">
+                                <button type="button" class="btn btn-primary">SAVE</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Jquery CDN -->
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <!-- Bootstrap CDN -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
+        integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o"
+        crossorigin="anonymous"></script>
+    <!-- Air Datepicker CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/js/datepicker.min.js"></script>
+</body>
+
+</html>

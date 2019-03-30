@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Automobile POS System</title>
+    <!-- Quicksand -->
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,700" rel="stylesheet">
+    <!-- Bootstrap CDN -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Air Datepicker CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/css/datepicker.min.css" rel="stylesheet">
+    <!-- Ionicons -->
+    <link href="https://unpkg.com/ionicons@4.2.2/dist/css/ionicons.min.css" rel="stylesheet">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="box_layout">
+        <header class="site_header">
+            <div class="container-fluid">
+                <div class="row align-items-center justify-content-between">
+                    <div class="col-auto">
+                        <a href="index.html" class="site_logo text-uppercase">Automobile POS System</a>
+                        <ul class="nav c_breadcrumb">
+                            <li><a href="index.html">Home</a></li>
+                            <li class="arrow"><i class="ion ion-ios-arrow-forward"></i></li>
+                            <li>Create Invoice</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-auto d-flex justify-content-between">
+                        <a href="product_service_form.html" class="btn btn-link btn_icon md"><i
+                                class="ion ion-md-add-circle mr-2"></i><span>Add Product / Service</span></a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="site_content">
+            <div class="product_service_form_wrapper">
+                <form class="site_block">
+                    <div class="site_block_body">
+                        <div class="row">
+                            <div class="col-9 align-self-end">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <div class="form-group mb-0">
+                                            <input type="text" class="form-control" id="" aria-describedby=""
+                                                placeholder="Customer Name">
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="form-group mb-0">
+                                            <input type="email" class="form-control" id="" aria-describedby=""
+                                                placeholder="Customer Email">
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="form-group mb-0">
+                                            <input type="text" class="form-control" id="" aria-describedby=""
+                                                placeholder="Customer Phone">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-3 ">
+                                <div class="row flex-column">
+                                    <div class="col-auto ml-auto border-left">
+                                        <div class="form-group mb-0">
+                                            <input type="text" readonly class="form-control invoice_input text-right"
+                                                id="" aria-describedby="" placeholder="Invoice No">
+                                        </div>
+                                    </div>
+                                    <div class="col-auto ml-auto border-left">
+                                        <div class="form-group mb-0">
+                                            <input type="text" readonly class="form-control invoice_input text-right"
+                                                id="" aria-describedby="" placeholder="Generated On">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <hr>
+                        <div class="site_title_wrapper mb-3">
+                            <div class="row align-items-center justify-content-between">
+                                <div class="col">
+                                    <h5 class="site_title" style="line-height: 1;">Product Details</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row no-gutters mb-5">
+                            <div class="col-4 pr-3">
+                                <div class="form-group mb-0">
+                                    <input type="text" class="form-control" id="" name="" aria-describedby=""
+                                        placeholder="Search product, service...">
+                                </div>
+                            </div>
+                            <div class="col-1 align-self-center">
+                                <div class="form-action-group d-flex align-items-center justify-content-between">
+                                    <button type="button" class="btn btn-light mr-2"><i
+                                            class="ion ion-md-add text-primary"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Product Name</label>
+                                    <input type="text" class="form-control" id="" name="" aria-describedby="">
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Brand Name</label>
+                                    <input type="text" class="form-control" id="" name="" aria-describedby="">
+                                </div>
+                            </div>
+                            <div class="col-1">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Quantity</label>
+                                    <input type="number" class="form-control" id="" name="" aria-describedby="">
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Amount</label>
+                                    <input type="text" class="form-control" id="" name="" aria-describedby="">
+                                </div>
+                            </div>
+                            <div class="col-1 align-self-center">
+                                <div class="form-action-group d-flex align-items-center justify-content-between">
+                                    <button type="button" class="btn btn-light mr-2"><i
+                                            class="ion ion-md-add text-primary"></i></button>
+                                    <button type="button" class="btn btn-light"><i
+                                            class="ion ion-ios-trash text-danger"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-3">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Discount in %</label>
+                                    <input type="text" class="form-control" id="" name="" aria-describedby="">
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Sub Total</label>
+                                    <input type="text" class="form-control" id="" name="" aria-describedby="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-auto">
+                                <div class="gray_block mt-3">
+                                    <i class="ion ion-ios-card" style="font-size: 18px;"></i>&nbsp;Payment Method: <span
+                                        class="font-weight-bold">Cheque</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="site_block_footer">
+                        <div class="row align-items-center justify-content-between">
+                            <div class="col-auto">
+                                <!-- text-success -->
+                                <p class="c_alert text-danger">Alert message will show here.</p>
+                            </div>
+                            <div class="col-auto text-right">
+                                <div class="row align-items-center">
+                                    <div class="col-auto">
+                                        <input type="text" class="form-control" id="" name="" aria-describedby=""
+                                            placeholder="Net Amount">
+                                    </div>
+                                    <div class="col-auto">
+                                        <button type="button" class="btn btn-primary">GENERATE INVOICE</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Jquery CDN -->
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <!-- Bootstrap CDN -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
+        integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o"
+        crossorigin="anonymous"></script>
+    <!-- Air Datepicker CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/js/datepicker.min.js"></script>
+</body>
+
+</html>

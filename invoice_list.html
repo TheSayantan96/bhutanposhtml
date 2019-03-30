@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Automobile POS System</title>
+    <!-- Quicksand -->
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,700" rel="stylesheet">
+    <!-- Datatable CDN -->
+    <link href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.bootstrap4.min.css" rel="stylesheet">
+    <!-- Bootstrap CDN -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Daterange Picker CDN -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <!-- Ionicons -->
+    <link href="https://unpkg.com/ionicons@4.2.2/dist/css/ionicons.min.css" rel="stylesheet">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="box_layout">
+        <header class="site_header">
+            <div class="container-fluid">
+                <div class="row align-items-center justify-content-between">
+                    <div class="col-auto">
+                        <a href="index.html" class="site_logo text-uppercase">Automobile POS System</a>
+                        <ul class="nav c_breadcrumb">
+                            <li><a href="index.html">Home</a></li>
+                            <li class="arrow"><i class="ion ion-ios-arrow-forward"></i></li>
+                            <li>Invoice List</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-auto d-flex justify-content-between">
+                        <a href="invoice.html" class="btn btn-link btn_icon md"><i
+                                class="ion ion-md-add-circle mr-2"></i><span>Create Invoice</span></a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="site_content">
+            <div class="site_tile_wrapper">
+                <div class="row">
+                    <div class="col-3">
+                        <div class="site_tile d-flex align-items-center justify-content-center">
+                            <div class="site_tile_icon"><i class="ion ion-ios-paper"></i></div>
+                            <div class="site_tile_details ml-4">
+                                <h5 class="site_tile_title text-uppercase">TOTAL INVOICES</h5>
+                                <h2 class="site_tile_stat text-uppercase">23</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="site_tile d-flex align-items-center justify-content-center">
+                            <div class="site_tile_icon"><i class="ion ion-ios-paper text-danger"></i></div>
+                            <div class="site_tile_details ml-4">
+                                <h5 class="site_tile_title text-uppercase">CANCELLED INVOICES</h5>
+                                <h2 class="site_tile_stat text-uppercase" style="color: #dc3545 !important;">103</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="site_tile d-flex align-items-center justify-content-center">
+                            <div class="site_tile_icon"><i class="ion ion-md-person"></i></div>
+                            <div class="site_tile_details ml-4">
+                                <h5 class="site_tile_title text-uppercase">TOP CUSTOMER TODAY</h5>
+                                <h2 class="site_tile_stat text-capitalize sm text-truncate">Sayantan Chandra</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="site_tile d-flex align-items-center justify-content-center">
+                            <div class="site_tile_icon"><i class="ion ion-ios-archive"></i></div>
+                            <div class="site_tile_details ml-4">
+                                <h5 class="site_tile_title text-uppercase">TOP PRODUCT TODAY</h5>
+                                <h2 class="site_tile_stat text-capitalize sm text-truncate">Product Name</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="site_invoice_table_wrapper">
+                <div class="site_title_wrapper mb-3">
+                    <div class="row align-items-center justify-content-between">
+                        <div class="col">
+                            <h5 class="site_title">Invoice List</h5>
+                        </div>
+                        <div class="col-auto">
+                            <div class="row no-gutters align-items-center">
+                                <label for="staticEmail" class="col-auto col-form-label pt-0 pb-0 pl-0 pr-3">Filter by
+                                    Date</label>
+                                <div class="col-auto">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="basic-addon1"><i
+                                                    class="ion ion-ios-calendar"></i></span>
+                                        </div>
+                                        <input type="text" class="form-control filter_input" name="daterange"
+                                            value="" />
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <table class="table table-bordered bg-white" id="invoice_list">
+                    <thead>
+                        <tr>
+                            <th scope="col">Sl #</th>
+                            <th scope="col">Invoice ID</th>
+                            <th scope="col">Customer Name</th>
+                            <th scope="col">Services Taken</th>
+                            <th scope="col">Amount</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                            <td><span style="font-family: sans-serif;">&#x20B9;&nbsp;</span>4,500</td>
+                            <td>
+                                <div class="btn-group" role="group" aria-label="Second group">
+                                    <button type="button" class="btn btn-light" data-toggle="tooltip"
+                                        data-placement="top" title="Edit"><i
+                                            class="ion ion-md-create text-info"></i></button>
+                                    <button type="button" class="btn btn-light" data-toggle="tooltip"
+                                        data-placement="top" title="Delete"><i
+                                            class="ion ion-ios-trash text-danger"></i></button>
+                                    <button type="button" class="btn btn-light" data-toggle="tooltip"
+                                        data-placement="top" title="View" onclick="location.href='product.html'"><i
+                                            class="ion ion-ios-eye text-secondary"></i></button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                            <td><span style="font-family: sans-serif;">&#x20B9;&nbsp;</span>2,000</td>
+                            <td>
+                                <div class="btn-group" role="group" aria-label="Second group">
+                                    <button type="button" class="btn btn-light" data-toggle="tooltip"
+                                        data-placement="top" title="Edit"><i
+                                            class="ion ion-md-create text-info"></i></button>
+                                    <button type="button" class="btn btn-light" data-toggle="tooltip"
+                                        data-placement="top" title="Delete"><i
+                                            class="ion ion-ios-trash text-danger"></i></button>
+                                    <button type="button" class="btn btn-light" data-toggle="tooltip"
+                                        data-placement="top" title="View" onclick="location.href='product.html'"><i
+                                            class="ion ion-ios-eye text-secondary"></i></button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Larry the Bird</td>
+                            <td>@twitter</td>
+                            <td>Larry the Bird</td>
+                            <td><span style="font-family: sans-serif;">&#x20B9;&nbsp;</span>21,000</td>
+                            <td>
+                                <div class="btn-group" role="group" aria-label="Second group">
+                                    <button type="button" class="btn btn-light" data-toggle="tooltip"
+                                        data-placement="top" title="Edit"><i
+                                            class="ion ion-md-create text-info"></i></button>
+                                    <button type="button" class="btn btn-light" data-toggle="tooltip"
+                                        data-placement="top" title="Delete"><i
+                                            class="ion ion-ios-trash text-danger"></i></button>
+                                    <button type="button" class="btn btn-light" data-toggle="tooltip"
+                                        data-placement="top" title="View" onclick="location.href='product.html'"><i
+                                            class="ion ion-ios-eye text-secondary"></i></button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <footer class="site_footer d-flex justify-content-center align-items-center">
+            <div class="container-fluid">
+                <div class="row align-items-center justify-content-between">
+                    <div class="col-auto"><h6>AUTOMOBILE POS SYSTEM</h6></div>
+                    <div class="col-auto"><span>Version 1.0</span></div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Jquery CDN -->
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <!-- include the dependencies -->
+    <script src="https://unpkg.com/sortablejs@1.7.0/Sortable.min.js"></script>
+    <script src="https://unpkg.com/clusterize.js@0.18.0/clusterize.min.js"></script>
+    <!-- Datatable -->
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.3/js/responsive.bootstrap4.min.js"></script>
+    <!-- Bootstrap CDN -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
+        integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o"
+        crossorigin="anonymous"></script>
+    <!-- Daterange Picker CDN -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <!-- Enable Tooltip Script -->
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+        $(document).ready(function () {
+            $('#invoice_list').DataTable({
+                'columnDefs': [{
+                    'targets': [5], /* column index */
+                    'orderable': false, /* true or false */
+                }],
+            });
+        });
+        $(function () {
+            $('input[name="daterange"]').daterangepicker({
+                ranges: {
+                    'Today': [moment(), moment()],
+                    'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                    'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                    'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                    'This Month': [moment().startOf('month'), moment().endOf('month')],
+                    'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+                },
+                "alwaysShowCalendars": true,
+                "startDate": "03/22/2019",
+                "endDate": "03/28/2019",
+                "opens": "left"
+            }, function (start, end, label) {
+                console.log('New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')');
+            });
+        });
+    </script>
+
+</body>
+
+</html>
